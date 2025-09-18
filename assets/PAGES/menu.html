@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RestroPoint-Menu</title>
+  <link rel="stylesheet" href="../CSS/menu.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courgette&family=Eater&family=Lilita+One&family=Mouse+Memoirs&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&family=Story+Script&family=Yellowtail&display=swap" rel="stylesheet">
+
+
+  <script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+  <style>
+ 
+  </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fas fa-fire"></i> RestroPoint
+    </div>
+    <nav class="nav-links">
+     <a href="../PAGES/home.html">Home</a>
+      <a href="../PAGES/about.html">About</a>
+      <a href="../PAGES/menu.html">Menu</a>
+      <a href="../PAGES/services.html">Services</a>
+      <a href="../PAGES/Contact.html">Contact</a>
+      <a href="../PAGES/booking.html"><button class="btn">Book A Table</button></a>
+       <a href="../PAGES/login.html"><i class="fas fa-user-circle"></i></a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu" id="side-menu">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <a href="../PAGES/login.html"><i class="fas fa-user-circle"></i></a>
+     <a href="../PAGES/home.html">Home</a>
+      <a href="../PAGES/about.html">About</a>
+      <a href="../PAGES/menu.html">Menu</a>
+      <a href="../PAGES/services.html">Services</a>
+      <a href="../PAGES/Contact.html">Contact</a>
+      <a href="../PAGES/booking.html"><button class="btn">Book A Table</button></a>
+      </div>
+
+
+ <section class="menu-section">
+        <h3 class="menu-heading">Choose <span>Menu</span> </h3>
+        <p class="menu-subheading">Indulge in an array of meticulously crafted dishes, expertly blending fresh ingredients for a delightful taste experience.</p>
+
+        <div class="menu-tabs">
+            <button class="tab-button active" data-category="all">All</button>
+            <button class="tab-button" data-category="breakfast">Breakfast</button>
+            <button class="tab-button" data-category="lunch">Lunch</button>
+            <button class="tab-button" data-category="dinner">Dinner</button>
+        </div>
+
+        <div class="menu-grid">
+            </div>
+    </section>
+
+
+
+<!-- 
+<div class="food-container">
+  <div class="food-header">
+    <h1>Our Food Menu</h1>
+    <div class="search-basket">
+      <input type="text" id="foodSearch" placeholder="Search food items..." />
+      <div class="basket">
+        <span id="basketCount">0</span>
+        <i class="fas fa-shopping-basket basket-icon"></i>
+      </div>
+    </div>
+  </div>
+  <div class="food-items" id="foodItems"></div>
+</div> -->
+
+
+
+ <div id="header11">
+    <div class="search-cart">
+      <input type="text" id="searchBox" placeholder="Search food...">
+      <div class="cart">
+        🛒 <span id="cartCount">0</span>
+      </div>
+    </div>
+ </div>
+
+  <main>
+    <div id="foodContainer" class="menu-grid"></div>
+  </main>
+
+
+
+
+
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-about">
+      <h2>RestroPoint</h2>
+      <p>Serving delicious food with love  and care.Fresh ingredients, authentic taste, and cozy atmosphere.
+        ThankYou..
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li> <a href="../PAGES/home.html">Home</a></li>
+        <li><a href="../PAGES/menu.html">Menu</a></li>
+        <li><a href="../PAGES/about.html">About</a></li>
+        <li><a href="../PAGES/Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="footer-hours">
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 10:00 AM - 10:00 PM</p>
+      <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+            <p><i class="fas fa-map-marker-alt"></i> Amalapuram, AP</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> info@RestroPoint.com</p>
+      <div class="socials1">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p> 2025 RestroPoint. All Rights Reserved.</p>
+  </div>
+</footer>
+  <script src="../JS/menu.js"></script>
+</body>
+</html>

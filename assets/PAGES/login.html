@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RestroPoint-Login</title>
+  <link rel="stylesheet" href="../CSS/login.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Courgette&family=Eater&family=Lilita+One&family=Mouse+Memoirs&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Wet+Paint&family=Story+Script&family=Yellowtail&display=swap" rel="stylesheet">
+</head>
+<body>
+
+
+ <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <i class="fas fa-fire"></i> RestroPoint
+    </div>
+    <nav class="nav-links">
+ <a href="../PAGES/home.html">Home</a>
+      <a href="../PAGES/about.html">About</a>
+      <a href="../PAGES/menu.html">Menu</a>
+      <a href="../PAGES/services.html">Services</a>
+      <a href="../PAGES/Contact.html">Contact</a>
+      <a href="../PAGES/booking.html"><button class="btn">Book A Table</button></a>
+       <a href="../PAGES/login.html"><i class="fas fa-user-circle"></i></a>
+    </nav>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+  </header>
+
+  <!-- Side Menu -->
+  <div class="side-menu" id="side-menu">
+    <div class="close-btn" id="close-btn"><i class="fas fa-times"></i></div>
+    <a href="../PAGES/login.html"><i class="fas fa-user-circle"></i></a>
+      <a href="../PAGES/home.html">Home</a>
+      <a href="../PAGES/about.html">About</a>
+      <a href="../PAGES/menu.html">Menu</a>
+      <a href="../PAGES/services.html">Services</a>
+      <a href="../PAGES/Contact.html">Contact</a>
+      <a href="../PAGES/booking.html"><button class="btn">Book A Table</button></a>
+      </div>
+
+
+
+
+
+ <section class="login-container">
+    <div class="login-box">
+      <h2>Login</h2>
+
+      <form id="loginForm">
+        <!-- Phone -->
+        <div class="input-group" id="phoneGroup">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" placeholder="Enter phone number" required>
+          <button type="button" class="login-btn" id="sendOtpBtn">Send OTP</button>
+        </div>
+
+        <!-- OTP (hidden initially) -->
+        <div class="input-group" id="otpGroup" style="display:none;">
+          <label for="otp">OTP</label>
+          <input type="text" id="otp" placeholder="Enter OTP" required>
+          <button type="submit" class="login-btn">Login</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+
+<footer class="footer">
+  <div class="footer-container">
+
+    <!-- About -->
+    <div class="footer-about">
+      <h2>RestroPoint</h2>
+      <p>Serving delicious food with love  and care.Fresh ingredients, authentic taste, and cozy atmosphere.
+        ThankYou..
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+             <li> <a href="../PAGES/home.html">Home</a></li>
+        <li><a href="../PAGES/menu.html">Menu</a></li>
+        <li><a href="../PAGES/about.html">About</a></li>
+        <li><a href="../PAGES/Contact.html">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Opening Hours -->
+    <div class="footer-hours">
+      <h3>Opening Hours</h3>
+      <p>Mon - Fri: 10:00 AM - 10:00 PM</p>
+      <p>Sat - Sun: 9:00 AM - 11:00 PM</p>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>   
+         <p><i class="fas fa-map-marker-alt"></i> Amalapuram, AP</p>
+      <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+      <p><i class="fas fa-envelope"></i> info@RestroPoint.com</p>
+      <div class="socials1">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom -->
+  <div class="footer-bottom">
+    <p> 2025 RestroPoint. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+
+
+  <script>
+  const sendOtpBtn = document.getElementById("sendOtpBtn");
+const phoneGroup = document.getElementById("phoneGroup");
+const otpGroup = document.getElementById("otpGroup");
+const otpInput = document.getElementById("otp");
+
+sendOtpBtn.addEventListener("click", () => {
+  let phone = document.getElementById("phone").value;
+  if (phone.length < 10) {
+    alert("Please enter a valid phone number");
+    return;
+  }
+  // Simulate OTP sent
+  alert("OTP sent to " + phone);
+  phoneGroup.style.display = "none";   // hide phone input
+  otpGroup.style.display = "block";   // show OTP field
+});
+
+document.getElementById("loginForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  let otp = otpInput.value.trim();
+
+  if (otp === "1234") { // demo OTP
+    alert("Login successful!");
+  } else {
+    alert("Invalid OTP. Try again.");
+  }
+
+  // ✅ Clear OTP field after submit
+  otpInput.value = "";
+});
+
+  </script>
+<!-- FontAwesome -->
+<script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+
+
+
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+
+
+
+<!-- Font Awesome -->
+<script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+
+
+
+<!-- Font Awesome for icons -->
+<script src="https://kit.fontawesome.com/b352bc2136.js" crossorigin="anonymous"></script>
+
+
+  <script src="../JS/Home.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f8f9fc;
+  color: #333;
+}
+p {
+  font-family: "Patrick Hand", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+h2  {
+  font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.contact-section {
+  padding: 60px 20px;
+  text-align: center;
+  margin-top:12px;
+    background: #f8f9fc;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.contact-section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color:#ff3c00;
+     font-family: "Londrina Solid", sans-serif;
+  font-weight: 900;
+  font-style: normal;
+}
+.contact-section span{
+  color: #0a1529;
+}
+.subtitle {
+  color: #faf7f7;
+  margin-bottom: 20px;
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  max-width: 1100px;
+  margin: auto;
+  align-items: start;
+  margin-top: -12px;
+}
+
+/* Form */
+.contact-form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-box input:focus,
+.input-box textarea:focus {
+  border-color: #ff9800;
+}
+
+textarea {
+  height: 120px;
+  resize: none;
+}
+
+button {
+  background: #ff3c00;
+  
+  color:white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+#bt1{
+  background: #ff3c00;
+}
+button:hover {
+  background: #e68900;
+    background: #ff3c00;
+}
+
+#formMessage {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+/* Info */
+.contact-info {
+  background: #111;
+    background: #0a1529;
+  color: #ddd;
+  padding: 25px;
+  border-radius: 12px;
+  text-align: left;
+}
+
+.contact-info h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.contact-info p {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.contact-info i {
+  color:  #ff3c00;;
+  
+  margin-right: 8px;
+  text-align: justify;
+}
+
+.map {
+  margin-top: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+  .contact-info {
+    text-align: center;
+  }
+}
